@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/froala-editor/css/froala_editor.pkgd.min.css",
+              "./node_modules/froala-editor/css/froala_style.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/froala-editor/js/froala_editor.pkgd.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,8 +98,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "iqraInterview:build:production",
+            "firebaseProject": "iqra-project-a9cf6",
+            "firebaseHostingSite": "iqra-project-a9cf6"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e2aecc56-7276-4dcc-8c9c-ec4a179e70f8"
   }
 }
