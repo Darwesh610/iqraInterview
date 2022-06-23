@@ -14,7 +14,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "dist/iqra-interview",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

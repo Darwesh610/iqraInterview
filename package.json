@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:prod" : "ng build --prod",
+    "publish:web" : "npm run build:prod && firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +21,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "angular": "^1.8.3",
     "angular-froala-wysiwyg": "^4.0.12",
     "moment-timezone": "^0.5.34",
     "rxjs": "~7.5.0",
